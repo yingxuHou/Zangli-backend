@@ -7,7 +7,7 @@ Werkzeug==2.3.7
 # Astronomy
 pyswisseph==2.10.3.2
 ephem==4.1.5
-zhdate==0.2
+zhdate
 skyfield==1.45
 jplephem==2.18
 numpy==1.24.3
