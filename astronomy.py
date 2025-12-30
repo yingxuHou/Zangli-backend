@@ -2,7 +2,7 @@
 天文计算模块
 包含日出日落、月相、行星位置等计算功能
 """
-import pyswisseph as swe
+import swisseph as swe
 from datetime import datetime, timedelta
 from collections import OrderedDict
 import numpy as np
