@@ -14,8 +14,8 @@ def main():
     app = create_app()
     
     # 获取配置
-    host = os.environ.get('FLASK_HOST', '127.0.0.1')
-    port = int(os.environ.get('FLASK_PORT', 5000))
+    host = os.environ.get('FLASK_HOST', '0.0.0.0')
+    port = int(os.environ.get('PORT', os.environ.get('FLASK_PORT', 5000)))
     debug = os.environ.get('FLASK_DEBUG', 'True').lower() == 'true'
     
     print(f"🚀 启动藏历历法API服务器...")
