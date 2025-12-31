@@ -18,7 +18,7 @@ def main():
     port = int(os.environ.get('PORT', os.environ.get('FLASK_PORT', 5000)))
     debug = os.environ.get('FLASK_DEBUG', 'True').lower() == 'true'
     
-    print(f"🚀 启动藏历历法API服务器...")
+    print(f"🚀 启动藏历历法API服务器 (Zeabur Deployment v2)...")
     print(f"📍 地址: http://{host}:{port}")
     print(f"🔧 调试模式: {'开启' if debug else '关闭'}")
     print(f"📚 API文档: http://{host}:{port}/api/health")
