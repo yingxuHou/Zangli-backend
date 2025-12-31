@@ -17,6 +17,15 @@ def create_app(config_name=None):
     # 注册蓝图
     from routes import api_bp
     app.register_blueprint(api_bp, url_prefix=app.config['API_PREFIX'])
+
+    # 添加根路由用于健康检查
+    @app.route('/')
+    def health_check():
+        return {
+            "status": "ok", 
+            "message": "Backend is running", 
+            "routes": [str(rule) for rule in app.url_map.iter_rules()]
+        }
     
     # 注册错误处理器
     register_error_handlers(app)
